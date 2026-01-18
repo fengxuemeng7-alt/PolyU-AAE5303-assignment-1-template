@@ -203,7 +203,11 @@ ros2 run env_check_pkg listener.py
 
 **Output (3–4 lines):**
 ```
-[Paste 3-4 lines of listener output here]
+[[INFO] [1768717917.335107237] [env_check_pkg_listener]: I heard: 'AAE5303 hello #73'
+[INFO] [1768717917.836244849] [env_check_pkg_listener]: I heard: 'AAE5303 hello #74'
+[INFO] [1768717918.337884056] [env_check_pkg_listener]: I heard: 'AAE5303 hello #75'
+[INFO] [1768717918.838925070] [env_check_pkg_listener]: I heard: 'AAE5303 hello #76'
+]
 ```
 
 **Alternative (using launch file):**
