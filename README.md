@@ -220,6 +220,8 @@ _[Include one screenshot showing talker + listener running]_
 
 ![Talker and Listener Running](path/to/your/screenshot.png)
 
+<img width="1078" height="773" alt="屏幕截图 2026-01-18 144240" src="https://github.com/user-attachments/assets/d2685bdd-9f3c-482d-94c4-ac95e7c69578" />
+
 ---
 
 ## 4. Problems Encountered and How I Solved Them
