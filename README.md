@@ -135,7 +135,10 @@ python scripts/test_open3d_pointcloud.py
 **Screenshot:**  
 _[Include one screenshot showing both tests passing]_
 
-![Python Tests Passing](path/to/your/screenshot.png)
+<img width="1047" height="899" alt="屏幕截图 2026-01-18 123639" src="https://github.com/user-attachments/assets/50008668-d790-4a4f-a58c-75cdbbdb4aa9" />
+<img width="1034" height="892" alt="屏幕截图 2026-01-18 123717" src="https://github.com/user-attachments/assets/05f5031c-5325-438b-833b-d1c8515dfd5b" />
+<img width="1039" height="386" alt="屏幕截图 2026-01-18 123739" src="https://github.com/user-attachments/assets/78c3c027-9c5a-49d3-a900-bbdded6fd667" />
+
 
 ---
 
