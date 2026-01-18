@@ -190,7 +190,10 @@ ros2 run env_check_pkg talker.py
 
 **Output (3–4 lines):**
 ```
-[Paste 3-4 lines of talker output here]
+[[INFO] [1768716397.127679099] [env_check_pkg_talker]: Publishing: 'AAE5303 hello #17'
+[INFO] [1768716397.629528545] [env_check_pkg_talker]: Publishing: 'AAE5303 hello #18'
+[INFO] [1768716398.131486750] [env_check_pkg_talker]: Publishing: 'AAE5303 hello #19'
+[INFO] [1768716398.633482611] [env_check_pkg_talker]: Publishing: 'AAE5303 hello #20']
 ```
 
 **Run listener:**
