@@ -29,9 +29,32 @@ _[Choose one:]_
 ### 2.1 Steps Taken
 
 Describe briefly how you created/activated your Python environment:
+**Steps taken:**
+1. **Create virtual environment:**
+   ```bash
+   python3 -m venv .venv
+2. **Activate virtual environment:**
+   ```bash
+   source .venv/bin/activate
+3. **Install Python dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+**Environment details:**
+- Python version: 3.10.12
+- Virtual environment location: `.venv/`
+- Virtual environment type: `venv` (not `virtualenv` or `conda`)
+- System site packages: Disabled (`include-system-site-packages = false`)
+- ```
+**Key commands used:**
+- `python3 -m venv .venv` - Creates the virtual environment using Python's venv module
+- `source .venv/bin/activate` - Activates the virtual environment in the current shell
+- `pip install -r requirements.txt` - Installs all required Python packages (numpy, scipy, matplotlib, opencv-python, open3d)
+
+---
 
 **Tool used:**  
-_[ system Python]_
+_[venv]_
 
 **Key commands you ran:**
 ```bash
