@@ -301,7 +301,7 @@ Choose one of the issues above and document how you used AI to solve it.
 
 **Your prompt:**
 ```
-[ Problems Encountered and How I Solved Them]
+[ Please help me configure the Multiple Shell Sessions Requiring Environment Setup so that it doesn't require manual loading each time I open the application.]
 ```
 
 ### 5.2 Key helpful part of the AI's answer
@@ -335,7 +335,7 @@ _[The artificial intelligence did not recommend any unsafe content to me. I modi
 Show the exact command or file edit that fixed the problem:
 
 ```bash
-[source ~/setup_ros2_ws.sh]
+source ~/setup_ros2_ws.sh
 ```
 
 **Why this worked:**  
