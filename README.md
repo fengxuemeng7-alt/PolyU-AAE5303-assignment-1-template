@@ -301,14 +301,18 @@ Choose one of the issues above and document how you used AI to solve it.
 
 **Your prompt:**
 ```
-[Copy-paste your actual message to the AI, not a summary]
+[ Problems Encountered and How I Solved Them]
 ```
 
 ### 5.2 Key helpful part of the AI's answer
 
 **AI's response (relevant part only):**
 ```
-[Quote only the relevant part of the AI's answer]
+[Multiple Shell Sessions Requiring Environment Setup
+
+**Error message:**
+```
+(Not an explicit error, but a workflow issue)]
 ```
 
 ### 5.3 What you changed or ignored and why
@@ -319,18 +323,29 @@ Explain briefly:
 - Did you double-check with official docs?
 
 **Your explanation:**  
-_[Write your analysis here]_
+_[The artificial intelligence did not recommend any unsafe content to me. I modified some of its schemes and I have also consulted relevant materials.
+- Script created: `~/setup_ros2_ws.sh` contains the necessary source commands
+- Script is executable: execution permissions have been set
+- Functionality verified:
+  - ROS2 commands are available (`ros2 --help` works correctly)
+  - Workspace packages can be found (`env_check_pkg` appears in the package list)]_
 
 ### 5.4 Final solution you applied
 
 Show the exact command or file edit that fixed the problem:
 
 ```bash
-[Your final command/code here]
+[source ~/setup_ros2_ws.sh]
 ```
 
 **Why this worked:**  
-_[Brief explanation]_
+_[A convenient script ~/setup_ros2_ws.sh has been created and the verification has also been passed.
+The script has been created: ~/setup_ros2_ws.sh contains the necessary source command.
+The script is executable: execution permissions have been set.
+Functional verification has been conducted.
+ROS2 commands are available (ros2 --help works normally).
+The workspace packages can be found (env_check_pkg appears in the package list). Therefore,
+In each new shell session, running this command will set the environment. This can be done each time to prevent omissions.]_
 
 ---
 
@@ -345,7 +360,31 @@ Short but thoughtful:
 
 **Your reflection:**
 
-_[Write your 3-5 sentence reflection here]_
+_[Through troubleshooting these ROS2 environment issues, I learned several key lessons about robotics environment configuration:
+
+**1. Environment sourcing is mandatory, not optional**
+- ROS2 requires explicit environment setup by sourcing `setup.bash` files in each shell session
+- Unlike many tools that work immediately after installation, ROS2 environments must be manually loaded
+- This design allows multiple ROS2 distributions to coexist on the same system
+
+**2. Layered environment architecture**
+- ROS2 uses a two-tier structure: base installation (`/opt/ros/humble/setup.bash`) + workspace (`install/setup.bash`)
+- Base installation provides core ROS2 functionality
+- Workspace setup extends the environment with custom packages
+- Both must be sourced in the correct order for packages to be discoverable
+
+**3. Automation is essential for productivity**
+- Manual sourcing works for single sessions but becomes tedious quickly
+- Creating setup scripts or `.bashrc` entries saves significant time
+- Scripts offer flexibility; `.bashrc` provides persistence - choose based on project needs
+
+**4. Error messages contain diagnostic clues**
+- Messages like `"package not found, searching: ['/opt/ros/humble']"` reveal what paths ROS2 is checking
+- This information directly points to missing environment sourcing steps
+- Learning to read error messages carefully accelerates debugging
+
+I am astonished by the power of current AI technology. I never expected that AI could accomplish so many things. I am truly shocked by its immense capabilities. Next time, I will pose better questions to enable the AI to assist me. I have noticed that different ways of asking questions can lead to different answer results. And make multiple backups in advance to prevent the situation of having to start all over again. With the completion of this assignment, I now have great confidence in being able to finish it.
+]_
 
 ---
 
@@ -354,13 +393,13 @@ _[Write your 3-5 sentence reflection here]_
 ✅ **I confirm that I performed this setup myself and all screenshots/logs reflect my own environment.**
 
 **Name:**  
-_[Your name]_
+_[FENG XUEMENG]_
 
 **Student ID:**  
-_[Your student ID]_
+_[25049422G]_
 
 **Date:**  
-_[Date of submission]_
+_[26/1/2026]_
 
 ---
 
@@ -368,13 +407,13 @@ _[Date of submission]_
 
 Before submitting, ensure you have:
 
-- [ ] Filled in all system information
-- [ ] Included actual terminal outputs (not just screenshots)
-- [ ] Provided at least 2 screenshots (Python tests + ROS talker/listener)
-- [ ] Documented 2–3 real problems with solutions
-- [ ] Completed the AI usage section with exact prompts
-- [ ] Written a thoughtful reflection (3–5 sentences)
-- [ ] Signed the declaration
+- [X] Filled in all system information
+- [X] Included actual terminal outputs (not just screenshots)
+- [X] Provided at least 2 screenshots (Python tests + ROS talker/listener)
+- [X] Documented 2–3 real problems with solutions
+- [X] Completed the AI usage section with exact prompts
+- [X] Written a thoughtful reflection (3–5 sentences)
+- [X] Signed the declaration
 
 ---
 
