@@ -1,7 +1,4 @@
-# AAE5303 Environment Setup Report — Template for Students
-
-> **Important:** Follow this structure exactly in your submission README.  
-> Your goal is to demonstrate **evidence, process, problem-solving, and reflection** — not only screenshots.
+# AAE5303 Environment Setup Report 
 
 ---
 
@@ -44,7 +41,7 @@ pip install -r requirements.txt
 ```
 
 **Any deviations from the default instructions:**  
-_[Describe any changes you made, or write "None"]_
+_[None]_
 
 ### 2.2 Test Results
 
@@ -228,54 +225,69 @@ _[Include one screenshot showing talker + listener running]_
 
 > **Note:** Write 2–3 issues, even if small. This section is crucial — it demonstrates understanding and problem-solving.
 
-### Issue 1: [Write the exact error message or problem]
+### Issue 1: [ros2: command not found]
 
 **Cause / diagnosis:**  
-_[Explain what you think caused it]_
+_[ROS2 environment variables are not loaded in the current shell session. Although ROS2 Humble is installed on the system (located at `/opt/ros/humble/`), you need to explicitly source the setup.bash file to use the `ros2` command.]_
 
 **Fix:**  
-_[The exact command/config change you used to solve it]_
+_[Source the ROS2 base environment before running any ros2 commands:]_
 
 ```bash
-[Your fix command/code here]
+[source /opt/ros/humble/setup.bash && ros2 launch env_check_pkg env_check.launch.py]
 ```
 
 **Reference:**  
-_[Official ROS docs? StackOverflow? AI assistant? Something else?]_
+_[- ROS2 Humble official installation documentation on environment configuration
+- ROS2 workspace getting started tutorial]_
 
 ---
 
-### Issue 2: [Another real error or roadblock]
+### Issue 2: [ Package 'env_check_pkg' Not Found]
 
 **Cause / diagnosis:**  
-_[Explain what you think caused it]_
+_[Only the ROS2 base environment was sourced, but the custom workspace environment was not loaded. The `env_check_pkg` package is located at `/root/PolyU-AAE5303-env-smork-test/ros2_ws/`, and ROS2 by default only searches system-installed package paths, so it cannot find custom packages compiled and installed in the workspace.]_
 
 **Fix:**  
-_[The exact command/config change you used to solve it]_
+_[Need to source both the ROS2 base environment and the workspace's install/setup.bash:]_
 
 ```bash
-[Your fix command/code here]
+[cd /root/PolyU-AAE5303-env-smork-test/ros2_ws && source /opt/ros/humble/setup.bash && source install/setup.bash && ros2 launch env_check_pkg env_check.launch.py]
 ```
 
 **Reference:**  
-_[Official ROS docs? StackOverflow? AI assistant? Something else?]_
+_[- ROS2 workspace concept documentation (colcon workspace)
+- Stack Overflow: "ROS2 package not found" related discussions
+- Environment sourcing section in ROS2 development best practices guide]_
 
 ---
 
-### Issue 3 (Optional): [Title]
+### Issue 3 (Optional): [ Multiple Shell Sessions Requiring Environment Setup]
 
 **Cause / diagnosis:**  
-_[Explain what you think caused it]_
+_[Every time a new terminal window or shell session is opened, the environment needs to be sourced again. If not sourced, previous commands will fail again. This is a design feature of ROS2 - each new shell requires manual environment loading.]_
 
 **Fix:**  
-_[The exact command/config change you used to solve it]_
+_[Add the source commands to the `.bashrc` file so they execute automatically when each new terminal opens, or create a startup script to conveniently set up the environment.]_
 
 ```bash
-[Your fix command/code here]
+[# Option 1: Add to ~/.bashrc (permanent solution)
+echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+echo "source ~/PolyU-AAE5303-env-smork-test/ros2_ws/install/setup.bash" >> ~/.bashrc
+# Option 2: Create a convenience script (temporary solution)
+cat > ~/setup_ros2_ws.sh << 'EOF'
+#!/bin/bash
+source /opt/ros/humble/setup.bash
+source ~/PolyU-AAE5303-env-smork-test/ros2_ws/install/setup.bash
+EOF
+chmod +x ~/setup_ros2_ws.sh
+# Usage: source ~/setup_ros2_ws.sh]
 ```
 
 **Reference:**  
-_[Official ROS docs? StackOverflow? AI assistant? Something else?]_
+_[- ROS2 environment configuration best practices
+- Linux bashrc configuration file documentation
+- ROS2 developer community discussions]_
 
 ---
 
