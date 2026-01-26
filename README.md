@@ -335,7 +335,7 @@ _[The artificial intelligence did not recommend any unsafe content to me. I modi
 Show the exact command or file edit that fixed the problem:
 
 ```bash
-source ~/setup_ros2_ws.sh
+:source ~/setup_ros2_ws.sh
 ```
 
 **Why this worked:**  
