@@ -314,13 +314,14 @@ Choose one of the issues above and document how you used AI to solve it.
 ```
 (Not an explicit error, but a workflow issue)]
 ```
-
-### 5.3 What you changed or ignored and why
-
+```
+**### 5.3 What you changed or ignored and why**
+```
 Explain briefly:
 - Did the AI recommend something unsafe?
 - Did you modify its solution?
 - Did you double-check with official docs?
+```
 
 **Your explanation:**  
 _[The artificial intelligence did not recommend any unsafe content to me. I modified some of its schemes and I have also consulted relevant materials.
@@ -329,8 +330,7 @@ _[The artificial intelligence did not recommend any unsafe content to me. I modi
 - Functionality verified:
   - ROS2 commands are available (`ros2 --help` works correctly)
   - Workspace packages can be found (`env_check_pkg` appears in the package list)]_
-
-### 5.4 Final solution you applied
+**### 5.4 Final solution you applied**
 
 Show the exact command or file edit that fixed the problem:
 
